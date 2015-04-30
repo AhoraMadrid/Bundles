@@ -1,0 +1,12 @@
+services:
+    re_captcha.validator:
+        class: AhoraMadrid\MicrocreditosBundle\Validator\Constraints\ReCaptchaValidator
+        arguments: [@request_stack, "%private_key%"]
+        tags:
+            - { name: validator.constraint_validator, alias: re_captcha.validator }
+
+    re_captcha.form.type:
+        class: AhoraMadrid\MicrocreditosBundle\Form\ReCaptchaType
+        arguments: ["%public_key%", %locale%]
+        tags:
+            - { name: form.type, alias: re_captcha }

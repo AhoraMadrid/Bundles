@@ -1,0 +1,25 @@
+{% extends 'AhoraMadridInscripcionInterventoresBundle::layout.html.twig' %}
+
+{% form_theme form 'AhoraMadridInscripcionInterventoresBundle::form_theme.html.twig' %}
+
+{% block body %}
+<div class="main-container">       
+	<div id="formularios">
+		{{ form_start(form, {'attr': {'role': 'form', 'id': 'formularioInscripcion'}}) }}
+		{{ form_errors(form) }}
+		<div class="row">
+			<div class="col-md-4">
+		    	<div class="col-xs-12 ">
+					<div>{{ form_row(form.nombre, {'attr': {'class': 'form-control'}, 'label': 'Nombre'}) }} </div>
+				</div>
+			</div>
+			<div class="col-md-8">
+		    	<div class="col-xs-12 ">
+					<div>{{ form_row(form.apellidos, {'attr': {'class': 'form-control'}, 'label': 'Apellidos'}) }} </div>
+				</div>
+			</div>
+		</div>
+		{{ form_end(form) }}
+	</div>
+</div>
+{% endblock %}
