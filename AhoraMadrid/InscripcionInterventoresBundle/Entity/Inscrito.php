@@ -5,6 +5,7 @@ namespace AhoraMadrid\InscripcionInterventoresBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use AhoraMadrid\InscripcionInterventoresBundle\Validator\Constraints as AMAssert;
 
 /**
  * Inscrito
@@ -49,6 +50,7 @@ class Inscrito
      * @var string
      *
      * @ORM\Column(name="documentoIdentidad", type="string", length=10)
+     * @AMAssert\DniNie
      */
     private $documentoIdentidad;
 

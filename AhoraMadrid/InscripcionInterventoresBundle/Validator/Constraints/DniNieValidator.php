@@ -1,5 +1,5 @@
 <?php
-namespace AhoraMadrid\MicrocreditosBundle\Validator\Constraints;
+namespace AhoraMadrid\InscripcionInterventoresBundle\Validator\Constraints;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 /**

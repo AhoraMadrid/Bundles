@@ -28,11 +28,20 @@ class DefaultController extends Controller{
 			
 			$em->persist($inscrito);
 			$em->flush();
+			
+			return $this->redirectToRoute('inscripcion_ok');
 		}
 		
 		//Si no se ha enviado el formulario, se carga la página con el formulario
 		return $this->render('AhoraMadridInscripcionInterventoresBundle:Default:inscripcion.html.twig', array(
 				'form' => $form->createView(),
 		));
+    }
+    
+    /**
+     * @Route("/inscripcion-realizada", name="inscripcion_ok")
+     */
+    public function contrato(Request $request){
+    	return $this->render('AhoraMadridInscripcionInterventoresBundle:Default:inscripcion_ok.html.twig');
     }
 }
