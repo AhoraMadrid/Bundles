@@ -20,14 +20,6 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('ahora_madrid_microcreditos');
 
-        $rootNode
-            ->children()
-                ->scalarNode('public_key')->isRequired()->end()
-                ->scalarNode('private_key')->isRequired()->end()
-                ->scalarNode('locale')->defaultValue('en')->end()
-            ->end()
-        ;
-
         return $treeBuilder;
     }
 }
